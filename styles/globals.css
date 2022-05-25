@@ -1,0 +1,317 @@
+@import url(https://fonts.googleapis.com/css?family=Righteous);
+body {
+  margin: 0;
+  padding: 0;
+  background: rgb(34,193,195);
+background: linear-gradient(234deg, rgba(34,193,195,1) 0%, rgba(240,240,246,1) 0%);
+}
+
+/*-----------NAVBAR STARTS HERE-----------*/
+nav {
+  
+  margin:10px auto 80px;
+  padding: 30px 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  border-bottom: 1px solid #ddd;
+  background-color: hsla(230,40%,50%,1);
+  position: relative;
+  top: -1rem;
+  
+}
+
+nav:before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0;
+  height: 100%;
+}
+
+nav div {
+  display: inline-block;
+  text-align: center;
+  padding: 10px 18px;
+  text-decoration: none;
+  z-index: 0;
+  margin-right: auto;
+  font-family: 'Righteous', serif;
+  color: #fff;
+  text-shadow: .03em;
+  font-size: 5em;
+  text-shadow: .03em .03em 0 hsla(230,40%,50%,1);
+}
+nav div:after {
+  margin-top: 40px;
+  margin-left: 30px;
+  content: attr(data-shadow);
+  position: absolute;
+  top: .06em; left: .06em;
+  z-index: -1;
+  text-shadow: none;
+  background-image:
+    linear-gradient(
+      45deg,
+      transparent 45%,
+      hsla(48,20%,90%,1) 45%,
+      hsla(48,20%,90%,1) 55%,
+      transparent 0
+      );
+  background-size: .05em .05em;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: shad-anim 15s linear infinite;
+  }
+
+  @keyframes shad-anim {
+    0% {background-position: 0 0}
+    0% {background-position: 100% -100%}
+    }
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  margin-right: 50px;
+  margin-bottom: 30px;
+}
+
+nav li {
+  float: left;
+}
+
+nav li a {
+  position: relative;
+  display: block;
+  color: #fff;
+  text-align: center;
+  padding: 8px 12px;
+  text-decoration: none;
+  z-index: 0;
+  font-family: 'Righteous', serif;
+  font-size: 2em;
+  color: #fff;
+  margin-left: 30px;
+  
+  /*margin-left: 15px;
+  padding-right: 10px; */
+}
+
+nav li a:before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  background-color:#A4DDED;
+  z-index: -1;
+  transform: scale(0);
+  transition: transform 0.5s ease-in-out;
+  
+
+}
+
+nav li a:hover:before,
+nav li a:focus:before {
+  transform: scale(1);
+  
+
+}
+
+
+
+/*-----------FOOTER STARTS HERE-----------*/
+
+
+footer {
+  margin:10px auto 80px;
+  padding: 10rem 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  border-bottom: 1px solid #ddd;
+  background-color: darkslateblue;
+  position: relative;
+  bottom: -20rem;
+  
+}
+
+
+/*------------HEADER STARTS HERE--------------------*/
+
+.demo {
+  /*height: 500px; 
+  width: 1200px;*/
+  height: 1000px;
+  margin: 0 auto;  
+  margin-bottom: 100px;
+  -webkit-box-shadow: -1px 9px 18px -5px rgba(199,199,199,1);
+  -moz-box-shadow: -1px 9px 18px -5px rgba(199,199,199,1);
+  box-shadow: -1px 9px 18px -5px rgba(199,199,199,1);
+  overflow: hidden;
+  border-radius: 10px;
+  position: relative;
+  top: -7rem;
+}
+
+
+/* ====== MAIN CODE ===== */
+.abstract {
+  background: url('https://i.postimg.cc/85VDf3QR/pink-and-purple-wallpaper-1616403.jpg') 0 0 no-repeat;
+  background-size: cover;
+}
+
+.abstract__div {
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* ===== IMAGE SETUP AND ANIMATION ===== */
+.abstract::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+
+  background: url('https://i.postimg.cc/85VDf3QR/pink-and-purple-wallpaper-1616403.jpg') 0 0 no-repeat;
+  background-size: cover;
+  opacity: 0.3;
+}
+
+.abstract:hover::before {
+  animation: glitch-image 0.4s infinite;
+}
+
+@keyframes glitch-image {
+  0% {
+      background-position: 0 0;
+      filter: hue-rotate(90deg);
+  }
+
+  20% {
+      background-position: -1px 0;
+  }
+
+  40% {
+      background-position: 2px 0;
+  }   
+  
+  60% {
+      background-position: -4px 0;
+  }
+
+
+  80% {
+      background-position: 4px  4px;
+  }
+
+
+  100% {
+      background-position: 0 0;
+      filter: hue-rotate(360deg);
+  }     
+}
+
+
+/* ===== TEXT SETUP AND ANIMATION ===== */
+.abstract__title {
+  font-family: 'Righteous', serif;
+  font-size: 100px;
+  letter-spacing: 5.5px;  
+  color: rgba(255, 255, 255, 0.1);  
+  position: relative;
+  z-index: 1;
+  transition: all 0.4s;
+}
+
+
+.abstract__title::before,
+.abstract__title::after {
+  content: attr(data-glitch);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.abstract:hover .abstract__title {
+  color: rgba(255, 255, 255, 1)
+}
+
+.abstract:hover .abstract__title::before {
+  color: #0ffbf9; 
+  animation: glitch-text--before 3s infinite;
+}
+
+.abstract:hover .abstract__title::after {
+  color:  #cc0f39;
+  animation: glitch-text--after 3s infinite;
+}
+
+@keyframes glitch-text--before {
+  0% {
+      left: -3px;
+      top: -3px;
+  }
+  
+  25% {
+      left: -1px;
+      top: 2px;
+  }
+
+  50% {
+      left: -1px;
+      top: 4px;
+  }
+  
+  75% {
+      left: 1px;
+      top: -3px;
+  }
+  
+  100% {
+      left: -3px;
+      top: -3px;
+  }    
+}
+
+
+@keyframes glitch-text--after {
+  0% {
+      left: 2px;
+      top: 2px;
+  }
+  
+  25% {
+      left: 1px;
+      top: -2px;
+  }
+
+  50% {
+      left: 1px;
+      top: -4px;
+  }
+  
+  75% {
+      left: -1px;
+      top: 3px;
+  }
+  
+  100% {
+      left: 2px;
+      top: 2px;
+  }    
+}
